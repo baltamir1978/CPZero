@@ -15,9 +15,15 @@ Montada el 22-nov-2026 desde el portátil. Responder siempre en español.
 - **Si `ssh cpzero` dice «tailnet policy does not permit you to SSH to this node»**: falta la
   regla de la ACL de Tailscale que deja a `tag:server` entrar en `tag:server` (plex y cpzero
   llevan esa etiqueta). La pone Bruno en la consola de Tailscale; no intentar rodearla.
-- **Pantalla remota (ZeroRemote)**: `http://cpzero:8320/` (en el móvil, con la IP: `http://100.66.95.5:8320/`) en el navegador (sólo desde la red de
-  Tailscale) enseña la pantalla en directo y deja pulsar teclas. Para ver la pantalla desde
-  aquí sin navegador: `ssh cpzero 'head -c 108800 /dev/fb0'` da una imagen RGB565 de 320×170.
+- **ZeroRemote** (pantalla, teclado y archivos en el navegador): `http://100.66.95.5:8320/`
+  (sólo desde la red de Tailscale; el nombre `cpzero` no resuelve en el móvil). En el
+  Cardputer, la app **Remote** del lanzador enseña el QR y los interruptores «Remote screen» y
+  «File sharing»; también se cambian en `~/.config/zeroremote/remote.conf` (`screen=`,
+  `files=`). Servicio: `systemctl status zeroremote`. Para ver la pantalla desde aquí sin
+  navegador: `ssh cpzero 'head -c 108800 /dev/fb0'` da una imagen RGB565 de 320×170.
+- **El lanzador se cae con 20 apps** (launcher#268): hay 16 desde el 22-nov-2026 (se quitaron
+  FactoryTest, GPS de origen, IR Chat y Keyboard Guide, y se ocultó la calculadora). Contar
+  antes de instalar otra.
 
 ## El aparato
 
