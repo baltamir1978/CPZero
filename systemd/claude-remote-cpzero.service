@@ -1,0 +1,17 @@
+[Unit]
+Description=Claude Code Remote Control «CPZero» (el Cardputer Zero desde el móvil)
+After=network-online.target
+
+[Service]
+# Carpeta propia: su CLAUDE.md explica el Cardputer y la separa de la sesión «HomeAssistant»
+# (la de Home Assistant, que vive en ~).
+WorkingDirectory=%h/CPZero
+Environment=PATH=%h/.local/bin:/usr/local/bin:/usr/bin:/bin
+ExecStart=%h/.local/bin/claude remote-control --name CPZero --permission-mode auto
+Restart=always
+RestartSec=30
+# La pantalla del QR se repinta cada segundo y llenaría el journal (igual que en «HomeAssistant»).
+StandardOutput=null
+
+[Install]
+WantedBy=default.target
