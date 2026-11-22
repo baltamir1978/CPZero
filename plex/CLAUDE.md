@@ -15,7 +15,7 @@ Montada el 22-nov-2026 desde el portátil. Responder siempre en español.
 - **Si `ssh cpzero` dice «tailnet policy does not permit you to SSH to this node»**: falta la
   regla de la ACL de Tailscale que deja a `tag:server` entrar en `tag:server` (plex y cpzero
   llevan esa etiqueta). La pone Bruno en la consola de Tailscale; no intentar rodearla.
-- **ZeroRemote** (pantalla, teclado y archivos en el navegador): `http://100.66.95.5:8320/`
+- **ZeroRemote** (pantalla, teclado y archivos en el navegador): `http://<IP de Tailscale de cpzero>:8320/` (la da `ssh cpzero tailscale ip -4`)
   (sólo desde la red de Tailscale; el nombre `cpzero` no resuelve en el móvil). En el
   Cardputer, la app **Remote** del lanzador enseña el QR y los interruptores «Remote screen» y
   «File sharing»; también se cambian en `~/.config/zeroremote/remote.conf` (`screen=`,
