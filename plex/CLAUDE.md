@@ -21,8 +21,8 @@ Montada el 22-nov-2026 desde el portátil. Responder siempre en español.
   «File sharing»; también se cambian en `~/.config/zeroremote/remote.conf` (`screen=`,
   `files=`). Servicio: `systemctl status zeroremote`. Para ver la pantalla desde aquí sin
   navegador: `ssh cpzero 'head -c 108800 /dev/fb0'` da una imagen RGB565 de 320×170.
-- **El lanzador se cae con 20 apps** (launcher#268): hay 16 desde el 22-nov-2026 (se quitaron
-  FactoryTest, GPS de origen, IR Chat y Keyboard Guide, y se ocultó la calculadora). Contar
+- **El lanzador se cae con 20 apps** (launcher#268): hay 15 desde el 22-nov-2026 (se quitaron
+  FactoryTest, GPS de origen, IR Chat, Keyboard Guide y SubG Chat, y se ocultó la calculadora). Contar
   antes de instalar otra.
 
 ## El aparato
