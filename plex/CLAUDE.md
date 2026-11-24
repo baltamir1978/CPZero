@@ -63,9 +63,13 @@ Cada uno tiene su `CLAUDE.md`: **leerlo antes de decir qué le falta a una app**
 | `ZeroRemote` | — | La pantalla remota de arriba (`Tools/instalar.sh` la instala en cpzero) |
 | `CPZero` | — | La configuración de esta sesión (este CLAUDE.md y su servicio); se instala desde el portátil |
 
-- En `plex` están clonados `~/ZeroGallery` y `~/ZeroTVBGone`; los demás se clonan aquí, en
-  `~/CPZero/<repo>`, si hace falta. Antes de tocar un repositorio, `git fetch`: también se
-  trabaja desde el portátil, y lo de allí se integra, nunca se pisa.
+- Los repositorios están en `~/Proyectos/<repo>`, que Syncthing mantiene igual que en el
+  portátil (desde el 24-nov-2026, `.git` incluido): lo hecho allí aparece aquí sin pasar por
+  GitHub. No trabajar en el mismo repositorio desde las dos máquinas a la vez (Syncthing deja
+  copias `*.sync-conflict-*`); antes de tocar uno, `git fetch` y lo de GitHub se integra, nunca
+  se pisa. Lo que no se sincroniza y por qué está en `~/Proyectos/CLAUDE.md`.
+- El SDK del Cardputer está en `~/Proyectos/ZeroTVBGone/.cache` y las demás apps Zero lo
+  enlazan (`.cache -> ../ZeroTVBGone/.cache`); esos enlaces no viajan con Syncthing.
 - Se compilan con `Tools/compilar.sh pruebas|deb` (en `plex` usa Docker). Para instalar en el
   aparato: `scp` del `.deb` y `sudo apt-get install -y /tmp/<deb>`.
 - Nombres sobrios y descriptivos (nada de «hacker» ni marketing).
