@@ -16,7 +16,7 @@ que corre en `plex` (ver `README.md`). El CLAUDE.md que lee esa sesión es `plex
 - **22-nov-2026 — montada.** `claude-remote-cpzero.service` activo en plex junto a
   `claude-remote.service` (la sesión «plex» de Home Assistant, que no se toca). Regla de la
   ACL de Tailscale puesta por Bruno: plex entra en cpzero por SSH (comprobado: ssh, sudo y la
-  web de ZeroRemote desde plex). Sin probar todavía una conversación desde el móvil.
+  web de ZeroRemote desde plex). Conversación desde el móvil probada por Bruno el 25-nov-2026: funciona.
 - **25-nov-2026 — `plex/CLAUDE.md` al día** con lo del 24-nov-2026: SDK fuera de `~/Proyectos`,
   repositorios que sólo están en GitHub, ZeroGPS y RF / NFC desinstaladas, el fork de Music y el
   envío a la tele, cómo ver y manejar la pantalla, el interruptor Host/Slave, preguntar antes de
